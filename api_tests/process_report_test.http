@@ -1,0 +1,9 @@
+POST http://localhost:4567/processReport
+Content-Type: application/json
+
+{
+  "students": [
+    { "name":"Alice", "marks":[90,85,92] },
+    { "name":"Bob", "marks":[70,60,75] }
+  ]
+}
