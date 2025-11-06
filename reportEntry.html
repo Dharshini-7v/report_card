@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Report System - Report Entry</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <span>Welcome, <strong id="username">User</strong></span>
+        <nav class="menu-bar">
+            <a href="dashboard.html">📊 Dashboard</a>
+            <a href="reportEntry.html" class="active">📝 Report Entry</a>
+            <a href="profile.html">👤 Profile</a>
+            <a href="#" onclick="logout()">🚪 Logout</a>
+        </nav>
+    </header>
+    <main>
+        <div class="card">
+            <h2>Report Entry</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 20px;">
+                Enter student details and marks to generate reports
+            </p>
+            
+            <div class="input-group" style="margin-bottom: 30px;">
+                <label style="flex: 1;">
+                    Number of Subjects
+                    <input id="subjects" type="number" min="1" max="10" value="3">
+                </label>
+                <label style="flex: 1;">
+                    Number of Students
+                    <input id="studentCount" type="number" min="1" max="50" value="2">
+                </label>
+                <button id="generate" type="button" style="margin-top: 28px;">Generate Form</button>
+            </div>
+
+            <form id="studentForm">
+                <div id="students"></div>
+                <div class="actions">
+                    <button type="submit" class="success">Process Reports</button>
+                    <button id="clear" type="button" class="secondary">Clear All</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="assets/script.js"></script>
+</body>
+</html>
+

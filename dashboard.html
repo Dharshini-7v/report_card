@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Report System - Dashboard</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <span>Welcome, <strong id="username">User</strong></span>
+        <nav class="menu-bar">
+            <a href="dashboard.html" class="active">📊 Dashboard</a>
+            <a href="reportEntry.html">📝 Report Entry</a>
+            <a href="profile.html">👤 Profile</a>
+            <a href="#" onclick="logout()">🚪 Logout</a>
+        </nav>
+    </header>
+    <main>
+        <div class="card">
+            <h2>Dashboard</h2>
+            <div id="summary">
+                <div style="text-align: center; padding: 20px; color: #666;">
+                    <p>Loading summary data...</p>
+                </div>
+            </div>
+            <div style="margin-top: 30px;">
+                <h3 style="margin-bottom: 15px;">Student Results</h3>
+                <table id="resultTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Average</th>
+                            <th>Grade</th>
+                            <th>Best Subject</th>
+                            <th>Remark</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultTableBody">
+                        <tr>
+                            <td colspan="5" style="text-align: center; padding: 20px; color: #666;">
+                                No data available yet. Create reports to see results here.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="assets/script.js"></script>
+</body>
+</html>
+
