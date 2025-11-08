@@ -20,7 +20,7 @@ const mockStore = (() => {
     }
     function save(data) { localStorage.setItem(KEY, JSON.stringify(data)); }
     const data = load();
-    if (!data.users) data.users = [{ username: 'admin', password: 'admin', dept: 'CSE' }];
+    if (!data.users) data.users = [{ username: 'admin', password: '1234', dept: 'CSE' }];
     if (!data.userData) data.userData = {}; // per-username: { students: [], summary: {...} }
     function getUserData(username) {
         const u = username || localStorage.getItem('username') || 'guest';
