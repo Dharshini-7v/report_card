@@ -256,7 +256,7 @@ Content-Type: application/json
 ### 1. Login
 - Navigate to `http://localhost:4567`
 - Enter your username and password
-- Click "Login" or use default credentials: `admin` / `1234`
+- Click "Login" or use default credentials: `admin` / `admin`
 
 ### 2. Create Reports
 - Click on **"Report Entry"** in the menu bar
