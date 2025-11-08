@@ -184,7 +184,7 @@ If you want to use PostgreSQL:
 - **Login Page**: `http://localhost:4567/index.html`
 - **Default Credentials**: 
   - Username: `admin`
-  - Password: `1234`
+  - Password: `admin`
 
 ### Stop the Server
 
