@@ -9,7 +9,7 @@ public class AuthHandler {
 
     public static void init() {
         // demo: default admin
-        USERS.put("admin", hash("1234"));
+        USERS.put("admin", hash("admin"));
     }
 
     public static Map<String,Object> signup(Map<String,String> body) {
@@ -51,4 +51,5 @@ public class AuthHandler {
         } catch (Exception e) { return s; }
     }
 }
+
 
