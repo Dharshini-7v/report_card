@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Report System - Profile</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <span>Logged in as: <strong id="username"></strong></span>
+        <nav class="menu-bar">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="reportEntry.html">Report Entry</a>
+            <a class="active" href="profile.html">Profile</a>
+            <a href="#" onclick="logout()">Logout</a>
+        </nav>
+    </header>
+
+    <div class="card">
+        <h2>Profile</h2>
+        <div class="profile-section">
+            <div class="profile-info">
+                <div class="profile-item">
+                    <label>Username</label>
+                    <div class="profile-value" id="profileUsername">-</div>
+                </div>
+                <div class="profile-item">
+                    <label>Department</label>
+                    <div class="profile-value" id="profileDept">-</div>
+                </div>
+            </div>
+            <div class="actions" style="margin-top: 20px;">
+                <button onclick="window.location.href='dashboard.html'">Go to Dashboard</button>
+                <button class="secondary" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/script.js"></script>
+    <script>
+        (function () {
+            if (!localStorage.getItem('isLoggedIn')) {
+                window.location.href = 'index.html';
+                return;
+            }
+            var u = localStorage.getItem('username') || '';
+            var elHeader = document.getElementById('username');
+            if (elHeader) elHeader.textContent = u;
+            var elUser = document.getElementById('profileUsername');
+            if (elUser) elUser.textContent = u || '-';
+            var dept = (JSON.parse(localStorage.getItem('srs-mock-store-v1') || '{}').users || [])
+                .find(function (x) { return x && x.username === u; });
+            document.getElementById('profileDept').textContent = (dept && dept.dept) ? dept.dept : '-';
+        })();
+    </script>
+</body>
+</html>
